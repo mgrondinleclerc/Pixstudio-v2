@@ -1,0 +1,23 @@
+{
+  "name": "@pixestudio/blocks",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.tsx"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pixestudio/core": "file:../core",
+    "react": "^19.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "typescript": "^5.8.3",
+    "vitest": "^5.1.0"
+  }
+}

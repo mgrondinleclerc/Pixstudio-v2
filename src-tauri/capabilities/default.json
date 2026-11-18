@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Permissions for the PixeStudio desktop window",
+  "windows": ["main", "preview", "toc-settings"],
+  "permissions": ["core:default", "core:window:allow-close", "core:window:allow-destroy", "core:webview:allow-create-webview-window", "dialog:default"]
+}

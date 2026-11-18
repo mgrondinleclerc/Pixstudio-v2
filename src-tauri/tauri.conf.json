@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "PixeStudio",
+  "version": "0.1.0",
+  "identifier": "com.pixestudio.desktop",
+  "build": {
+    "beforeDevCommand": "npm --workspace @pixestudio/desktop run dev",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm --workspace @pixestudio/desktop run build",
+    "frontendDist": "../apps/desktop/dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "PixeStudio",
+        "width": 1440,
+        "height": 900,
+        "maximized": true,
+        "minWidth": 1050,
+        "minHeight": 700,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis", "msi"],
+    "icon": ["icons/icon.ico"]
+  }
+}
